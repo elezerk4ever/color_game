@@ -1,0 +1,140 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    cursor: none;
+}
+body{
+    background: #221133;
+    overflow: hidden;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    /* background: #222; */
+    display: flex;
+}
+
+#board{
+    height: 90%;
+    width: 60vw;
+    /* background: #1a1024; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.box{
+    border-radius: 0.5em;
+    background: white;
+    opacity: 0.2;
+    box-shadow: inset 0px 0px 10px black;
+    margin: 1em;
+    /* transition: 100ms all ease-in-out; */
+}
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.yellow{
+    background: yellow;
+}
+.blue{
+    background: blue;
+}
+.purple{
+    background: purple;
+}
+.orange{
+    background: orangered;
+}
+.active{
+    opacity: 1;
+}
+button{
+    outline: none;
+    width: 96%;
+    box-shadow: inset 0px 0px 10px black;
+    margin:0px 0.5em;
+    font-size: 30px;
+    height: 10%;
+    padding: 0.5em;
+    letter-spacing: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+    background: rgb(16, 73, 230);
+    cursor: pointer;
+}
+button:hover{
+    background: rgba(7, 29, 90, 0.644);
+}
+#players{
+    width: 100%;
+    height: 70%;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#players div{
+    box-shadow: 0px 0px 10px white;
+    background: #000;
+    background-position: center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0.25em;
+    height: 19vh;
+    border: 1em solid black;
+    transition: 500ms ease-in-out all ;
+}
+#players div:nth-child(1){
+    border-color: red;
+}
+#players div:nth-child(2){
+    border-color: green;
+}
+#players div:nth-child(3){
+    border-color: yellow;
+}
+#players div:nth-child(4){
+    border-color: blue;
+}
+#players div:nth-child(5){
+    border-color: purple;
+}
+#players div:nth-child(6){
+    border-color: orangered;
+}
+#timer{
+    height: 25%;
+    width: 100%;
+    box-shadow: inset 0px 0px 10px black;
+    background: rgb(2, 68, 65);
+    border-radius: 0.25em;
+    font-size: 130px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    color: rgb(197, 218, 84);
+}
+#banner{
+    width: 100vw;
+    font-size: 50px;
+    position: absolute;
+    z-index: 99;
+    top: 20vh;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+    /* box-shadow: 0px 10px #111; */
+    border-bottom: 10px solid #111;
+    border-top: 10px solid #111;
+    padding: 0.5em;
+    color: #111;
+}
+.winner{
+    position: absolute;
+    width: 20vh;
+    left: 40vw;
+    top: 55vh;
+    opacity: 1 !important;
+}
